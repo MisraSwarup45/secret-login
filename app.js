@@ -33,7 +33,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://127.0.0.1:27017/userDB", { useNewUrlParser: true });
+mongoose.connect(`mongodb+srv://${process.env.DATA_ID}:${process.env.DATA_PASS}@cluster0.w5cd1gk.mongodb.net/secretDB`, { useNewUrlParser: true });
 
 
 const userSchema = new mongoose.Schema({
